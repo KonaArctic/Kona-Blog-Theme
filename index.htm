@@ -1,0 +1,44 @@
+---
+layout: page
+---
+{% for post in site.posts %}
+	<article
+	  style="
+	    margin-bottom: 4rem;
+	    margin-top: 4rem;
+	  "
+	>
+		<a href="{{ post.url }}">
+			<h1
+			  style="
+			    font-size: 2rem;  /* 'cause its in an <article> */
+			    margin-bottom: 0.5rem;
+			  "
+			>
+				{{ post.title }}
+			</h1>
+		</a>
+		<span
+		  style="
+		    color: grey;
+		    display: block;
+        font-style: italic;
+		    text-align: right;
+		  "
+		>
+			Posted
+			<time
+			  datetime="{{ post.date | date: '%Y-%m-%d' }}"
+			>
+			  {{ post.date | date_to_long_string }}
+			</time>
+		</span>
+		<p
+		  style="
+		    margin-top: 0.5rem;
+		  "
+		>
+			{{ post.excerpt | strip_html | escape }}
+		</p>
+	</article>
+{% endfor %}

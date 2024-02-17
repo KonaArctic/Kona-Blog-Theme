@@ -1,0 +1,9 @@
+# Blog title
+title: "Kona's Blog"
+# Your name
+author: "Kona Arctic"
+# Description for scrappers. Real description in about.html
+description: "Hello! I'm Kona Arctic, an arctic fox."
+# Base URL for media and assets (if served by CDN)
+cdnurl: "https://kona.cf/media"
+

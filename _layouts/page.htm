@@ -1,0 +1,58 @@
+---
+layout: all
+---
+<header
+  style="
+	  margin-top: 4rem;
+	  margin-bottom: 4rem;
+	"
+>
+	<center> 
+		<img 
+		  alt="Profile picture"
+		  height="200"
+		  src="/picture" 
+		/>
+	</center>
+	<h1
+		style="
+			margin-bottom: 0.5rem;
+		"
+	>
+		about me
+	</h1>
+	<nav
+		style="
+			display: flex;
+			justify-content: space-around;
+		"
+	>
+  {% capture social %}{% include social %}{% endcapture %}
+  {{ social | markdownify | remove : "<p>" | remove : "</p>" }}
+	</nav>
+	<p
+		style="
+			margin-top: 0.5rem;
+		"
+	>
+		{% include about %}
+	</p>
+</header>
+<main
+  style="
+	  margin-top: 4rem;
+	  margin-bottom: 4rem;
+	">
+  {{ content }}
+</main>
+<footer
+	style="
+		color: grey;
+	  margin-top: 4rem;
+	  margin-bottom: 4rem;
+		text-align: center;
+	"
+>
+	Copyright (c) 2024 {{ site.author }}. Theme by Kona Arctic.
+</footer>
+

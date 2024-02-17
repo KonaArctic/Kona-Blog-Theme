@@ -1,0 +1,29 @@
+---
+layout: page
+---
+<a href="{{ page.url }}">
+	<h1
+	  style="
+	    font-size: 2rem;  /* 'cause its in an <article> */
+	    margin-bottom: 0.5rem;
+	  "
+	>
+		{{ page.title }}
+	</h1>
+</a>
+<span
+  style="
+    color: grey;
+    display: block;
+    font-style: italic;
+    text-align: right;
+  "
+>
+	Posted
+	<time
+	  datetime="{{ page.date | date: '%Y-%m-%d' }}"
+	>
+	  {{ page.date | date_to_long_string }}
+	</time>
+</span>
+{{ content }}

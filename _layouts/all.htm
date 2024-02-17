@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+		<meta name="keywords" content="{% if page.keywords %}{{ site.keywords }}{% else %}{{ page.tags }}{% endif %}" />
+		<meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}" />
+		<meta name="generator" content="my paws" />
+		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+		<style>
+		  :root {
+		    --blue : rgb( 127 , 255 , 255 );
+		    --red : rgb( 255 , 127 , 127 );
+		    --yellow : rgb( 255 , 255 , 127 );
+		    --margin : var( 1rem );
+		  }
+			h1, h2, h3, h4, h5, h6 {
+				font-family : "Comfortaa" , "Quicksand" , sans-serif;
+				font-weight : lighter;
+			}
+			a {
+				color: var( --blue );
+				text-decoration : none;
+				transition-property : color;
+				transition-duration : 1s;
+			}
+			a:hover {
+				color : var( --yellow );
+				text-decoration : none;
+			}
+      img, video {
+	      max-width : 100%;
+	      border-radius : 1em;
+      }
+      code {
+	      color : rgb( 0 , 255 , 0 ); /*var( --red );*/
+      }
+      pre {
+	      padding : var( --margin );
+	      color : rgb( 0 , 255 , 0 );
+      }
+      blockquote {
+        margin-left : 1em;
+        padding-left : 1em;
+        border-left-width : 2px;
+        border-left-style : solid;
+	      border-left-color : var( --blue );
+	      color : var( --yellow );
+      }
+		</style>
+		<style>
+		  /* Red navbar */
+		  html > body > header > nav > a {
+		    color: var( --red );
+		  }
+		  html > body > header > nav > a:hover {
+		    color: var( --yellow );
+		  }
+		</style>
+	</head>
+	<body
+		style="
+			background-color : rgb( 16 , 16 , 16 );
+			color : white;
+			font-family : sans-serif;
+			line-height : 1.5em;
+			text-align: justify;
+			margin-top: auto;
+			margin-bottom: auto;
+			margin-right: auto;
+			margin-left: auto;
+			width: 66.667%;
+			max-width: 48rem;
+		"
+	>
+	  {{ content }}
+	</body>
+</html>
+
